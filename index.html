@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StealJS Package Build :: Demo Page</title>
+</head>
+<body>
+
+    <header class="viewport-header"></header>
+
+    <div class="viewport-content">
+        <div class="loading-mask">
+            <div class="loading-spinner">
+                <span>Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <footer class="viewport-header"></footer>
+
+    <script type="text/javascript" src="./steal/steal.js?nns/page/demo,development"></script>
+    <script type="text/javascript">
+        steal('jquery', 'nns/page/demo', function($, PageController) {
+            new PageController($(document.body));
+        });
+    </script>
+
+</body>
+</html>
