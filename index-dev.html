@@ -18,6 +18,11 @@
 
     <footer class="viewport-header"></footer>
 
+    <!--
+        This tag is the only difference between index.html and index-production.html:
+        We use steal.js with environment "development" here,
+        and steal.production.js with environment "production" in index-production.html
+    -->
     <script type="text/javascript" src="./steal/steal.js?nns/page/demo,development"></script>
     <script type="text/javascript">
         steal('jquery', 'nns/page/demo', function($, PageController) {

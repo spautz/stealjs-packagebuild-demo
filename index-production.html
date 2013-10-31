@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StealJS Package Build :: Demo Page</title>
+</head>
+<body>
+
+    <header class="viewport-header"></header>
+
+    <div class="viewport-content">
+        <div class="loading-mask">
+            <div class="loading-spinner">
+                <span>Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <footer class="viewport-header"></footer>
+
+    <!--
+        This tag is the only difference between index.html and index-production.html:
+        We use steal.production.js with environment "production" here,
+        and steal.js with environment "development" in index.html
+    -->
+    <script type="text/javascript" src="./steal/steal.production.js?nns/page/demo,production"></script>
+    <script type="text/javascript">
+        steal('jquery', 'nns/page/demo', function($, PageController) {
+            new PageController($(document.body));
+        });
+    </script>
+
+</body>
+</html>
